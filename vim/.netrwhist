@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/Users/tatum/.vim'
 let g:netrw_dirhist_2='/Users/tatum/.vim/colors'
 let g:netrw_dirhist_3='/Users/tatum/Code/TKML/BACKSTAGE/traffic_cop'
@@ -8,3 +8,4 @@ let g:netrw_dirhist_5='/Users/tatum/Code/TKML/BACKSTAGE/traffic_cop/app/helpers'
 let g:netrw_dirhist_6='/Users/tatum/Code/TKML/BACKSTAGE/traffic_cop/app'
 let g:netrw_dirhist_7='/Users/tatum/Code/TKML/BACKSTAGE/traffic_cop/app/controllers'
 let g:netrw_dirhist_8='/Users/tatum/dotfiles'
+let g:netrw_dirhist_9='/Users/bmehrman/.ssh'
