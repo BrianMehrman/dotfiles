@@ -1,11 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/Users/tatum/.vim'
-let g:netrw_dirhist_2='/Users/tatum/.vim/colors'
-let g:netrw_dirhist_3='/Users/tatum/Code/TKML/BACKSTAGE/traffic_cop'
-let g:netrw_dirhist_4='/Users/tatum/Code/TKML/BACKSTAGE/traffic_cop/app'
-let g:netrw_dirhist_5='/Users/tatum/Code/TKML/BACKSTAGE/traffic_cop/app/helpers'
-let g:netrw_dirhist_6='/Users/tatum/Code/TKML/BACKSTAGE/traffic_cop/app'
-let g:netrw_dirhist_7='/Users/tatum/Code/TKML/BACKSTAGE/traffic_cop/app/controllers'
-let g:netrw_dirhist_8='/Users/tatum/dotfiles'
-let g:netrw_dirhist_9='/Users/bmehrman/.ssh'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/private/etc/apache2'
+let g:netrw_dirhist_2='/private/etc'
+let g:netrw_dirhist_3='/private/etc/apache2'

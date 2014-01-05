@@ -26,6 +26,13 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 fi
 
 
-# ACCuCREV --- New environment setting added by AccuRev on Mon Feb 25 21:54:48 CST 2013 1.
-PATH="${PATH}:/Users/tatum/Applications/AccuRev/bin"
+
+# New environment setting added by AccuRev on Sat Jan 04 10:12:37 CST 2014 1.
+# The unmodified version of this file is saved in /Users/bmehrman/.bash_profile1415112675.
+# Do NOT modify these lines; they are used to uninstall.
+PATH="${PATH}:/Users/bmehrman/Applications/AccuRev/bin"
 export PATH
+# End comments by InstallAnywhere on Sat Jan 04 10:12:37 CST 2014 1.
+
+## import bashrc file ##
+[[ -r ~/.bashrc ]] && . ~/.bashrc
