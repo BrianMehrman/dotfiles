@@ -106,7 +106,7 @@ VIOLAT="\[\e[0;94m\]"
 PS_CLEAR="\[\e[0m\]"
 
 prompt_color() {
-  PS1="${YELLOW}[${GREEN}\u${LBLUE}@${VIOLAT}\h${YELLOW}][${LBLUE}\w${YELLOW}] ♆${PS_CLEAR} "
+  PS1="${YELLOW}[${GREEN}\u${LBLUE}@${VIOLAT}\h${YELLOW}][${LBLUE}\w${YELLOW}] $(parse_git_branch) ♆${PS_CLEAR} "
   PS2="\[\]continue \[\]> "
 }
 

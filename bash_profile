@@ -8,6 +8,9 @@ function parse_git_dirty {
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/(\1$(parse_git_dirty))/"
 }
+
+
+
 export PS1='\u@\h \[\033[1;32m\]\w\[\033[0m\]$(parse_git_branch)$ '
 
 
@@ -36,3 +39,9 @@ export PATH
 
 ## import bashrc file ##
 [[ -r ~/.bashrc ]] && . ~/.bashrc
+# New environment setting added by AccuRev on Fri Jan 17 16:56:14 CST 2014 1.
+# The unmodified version of this file is saved in /Users/bmehrman/.bash_profile369065089.
+# Do NOT modify these lines; they are used to uninstall.
+PATH="${PATH}:/Applications/AccuRev/bin"
+export PATH
+# End comments by InstallAnywhere on Fri Jan 17 16:56:14 CST 2014 1.

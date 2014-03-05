@@ -1,10 +1,10 @@
 [color]
 	ui = auto
 [user]
-	name = tatums
-	email = tatum@ashlandstudios.com
+	name = brianmehrman
+	email = bcmehrman@gmail.com
 [core]
-	excludesfile = /Users/tatum/.gitignore
+	excludesfile = /Users/Mehrman-MBP/.gitignore
 [mergetool]
 	keepBackup = false
 [push]
