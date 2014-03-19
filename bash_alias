@@ -8,11 +8,7 @@ alias sc='script/console'
 alias ocov='open coverage/index.html'
 
 
-##
-alias gs='echo Hey... dummy, stop using gs.'
-
-
-
+alias h='history'
 
 alias spec='spring rspec'
 

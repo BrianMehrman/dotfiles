@@ -9,6 +9,19 @@ function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/(\1$(parse_git_dirty))/"
 }
 
+function git_info() {
+  # check if we're in a git repo
+  git rev-parse --is-inside-work-tree &>/dev/null || return
+
+  # quickest check for what branch we're on
+  branch=$(git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||')
+
+  # check if it's dirty (via github.com/sindresorhus/pure)
+  dirty=$(git diff --quiet --ignore-submodules HEAD &>/dev/null; [ $? -eq 1 ]&& echo -e "*")
+
+  echo $WHITE" on "$PURPLE$branch$dirty
+}
+
 
 
 export PS1='\u@\h \[\033[1;32m\]\w\[\033[0m\]$(parse_git_branch)$ '
