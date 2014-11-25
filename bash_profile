@@ -2,12 +2,6 @@
 PATH=/usr/local/bin:$PATH
 
 
-function parse_git_dirty {
-  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "*"
-}
-function parse_git_branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/(\1$(parse_git_dirty))/"
-}
 
 function git_info() {
   # check if we're in a git repo
@@ -23,8 +17,6 @@ function git_info() {
 }
 
 
-
-export PS1='\u@\h \[\033[1;32m\]\w\[\033[0m\]$(parse_git_branch)$ '
 
 
 if [ -f ~/.bash_alias ]; then
@@ -42,7 +34,6 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 fi
 
 
-
 # New environment setting added by AccuRev on Sat Jan 04 10:12:37 CST 2014 1.
 # The unmodified version of this file is saved in /Users/bmehrman/.bash_profile1415112675.
 # Do NOT modify these lines; they are used to uninstall.
@@ -58,3 +49,35 @@ export PATH
 PATH="${PATH}:/Applications/AccuRev/bin"
 export PATH
 # End comments by InstallAnywhere on Fri Jan 17 16:56:14 CST 2014 1.
+
+# ----------------------------------------------------------------------
+# PROMPT
+# ----------------------------------------------------------------------
+function parse_git_dirty {
+  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "*"
+}
+function parse_git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/(\1$(parse_git_dirty))/"
+}
+
+
+LBLUE="\[\e[0;36m\]"
+GREEN="\[\e[0;32m\]"
+YELLOW="\[\e[0;33m\]"
+VIOLAT="\[\e[0;94m\]"
+PS_CLEAR="\[\e[0m\]"
+
+export PS1="${YELLOW}[${GREEN}\u${LBLUE}@${VIOLAT}\h${YELLOW}][${LBLUE}\w${YELLOW}]\$(parse_git_branch) ♆${PS_CLEAR} "
+
+## Create ENV VARS
+
+
+# Apache-Maven
+export M2_HOME=/usr/local/apache-maven/apache-maven-3.2.1
+export M2=$M2_HOME/bin
+export MAVEN_OPTS="-Xms256m -Xmx512m"
+export PATH=$M2:$PATH
+
+# Java Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_60.jdk/Contents/Home
+export PATH=$PATH:$JAVA_HOME/bin

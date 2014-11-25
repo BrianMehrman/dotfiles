@@ -95,44 +95,6 @@ HISTCONTROL=ignoreboth
 HISTFILESIZE=10000
 HISTSIZE=10000
 
-# ----------------------------------------------------------------------
-# PROMPT
-# ----------------------------------------------------------------------
-
-LBLUE="\[\e[0;36m\]"
-GREEN="\[\e[0;32m\]"
-YELLOW="\[\e[0;33m\]"
-VIOLAT="\[\e[0;94m\]"
-PS_CLEAR="\[\e[0m\]"
-
-prompt_color() {
-  PS1="${YELLOW}[${GREEN}\u${LBLUE}@${VIOLAT}\h${YELLOW}][${LBLUE}\w${YELLOW}]$(parse_git_branch) ♆${PS_CLEAR} "
-  PS2="\[\]continue \[\]> "
-}
-
-# ----------------------------------------------------------------------
-# LS AND DIRCOLORS
-# ----------------------------------------------------------------------
-
-export CLICOLOR=1
-export LSCOLORS=gxgxcxdxbxegedabagacad  # cyan directories
-
-# -------------------------------------------------------------------
-# USER SHELL ENVIRONMENT
-# -------------------------------------------------------------------
-
-# Use the color prompt by default when interactive
-test -n "$PS1" &&
-prompt_color
-
-# Change terminal title based on path and host.
-case "$TERM" in
-  xterm*|rxvt*)
-  PROMPT_COMMAND='echo -ne "\033]0;${USER}: ${PWD}\007"'
-  ;;
-  *)
-  ;;
-esac
 
 # -------------------------------------------------------------------
 # MOTD
@@ -144,7 +106,10 @@ test -n "$INTERACTIVE" -a -n "$LOGIN" && {
 }
 [[ -s "/Users/bmehrman/.rvm/scripts/rvm" ]] && source "/Users/bmehrman/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-PATH=$PATH:/usr/local/share/npm/bin/
+PATH=$PATH:/usr/local/share/npm/bin
 PATH=$PATH:/usr/local/bin # homebrew - here for non-interactive shell
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
