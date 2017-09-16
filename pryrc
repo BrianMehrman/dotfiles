@@ -1,0 +1,1 @@
+puts 'loading global .pryrc'
