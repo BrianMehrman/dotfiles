@@ -1,7 +1,4 @@
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 PATH=/usr/local/bin:$PATH
-
-
 
 function git_info() {
   # check if we're in a git repo
@@ -16,23 +13,17 @@ function git_info() {
   echo $WHITE" on "$PURPLE$branch$dirty
 }
 
-
-
-
 if [ -f ~/.bash_alias ]; then
    source ~/.bash_alias
 fi
-
 
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
 export EDITOR='subl'
 
-
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
-
 
 # New environment setting added by AccuRev on Sat Jan 04 10:12:37 CST 2014 1.
 # The unmodified version of this file is saved in /Users/bmehrman/.bash_profile1415112675.
@@ -60,7 +51,6 @@ function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/(\1$(parse_git_dirty))/"
 }
 
-
 LBLUE="\[\e[0;36m\]"
 GREEN="\[\e[0;32m\]"
 YELLOW="\[\e[0;33m\]"
@@ -71,7 +61,6 @@ export PS1="${YELLOW}[${GREEN}\u${LBLUE}@${VIOLAT}\h${YELLOW}][${LBLUE}\w${YELLO
 
 ## Create ENV VARS
 
-
 # Apache-Maven
 export M2_HOME=/usr/local/apache-maven/apache-maven-3.2.1
 export M2=$M2_HOME/bin
@@ -81,3 +70,8 @@ export PATH=$M2:$PATH
 # Java Home
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_60.jdk/Contents/Home
 export PATH=$PATH:$JAVA_HOME/bin
+# GO home
+export GO_HOME=/usr/local/go/bin
+export PATH=$PATH:$GO_HOME
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

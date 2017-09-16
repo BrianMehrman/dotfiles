@@ -5,6 +5,7 @@
 	email = bcmehrman@gmail.com
 [core]
 	excludesfile = /Users/Mehrman-MBP/.gitignore
+	editor = vim
 [mergetool]
 	keepBackup = false
 [push]
