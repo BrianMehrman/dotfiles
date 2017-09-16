@@ -1,11 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/Users/brianmehrman/ruby_projects/my_portfolio'
-let g:netrw_dirhist_2='/Users/brianmehrman/node_projects/redux/examples/todos'
-let g:netrw_dirhist_3='/Users/brianmehrman/ruby_projects/gems/rails_probe'
-let g:netrw_dirhist_4='/Users/brianmehrman/node_projects/react_projects/timeliner'
-let g:netrw_dirhist_5='/Users/brianmehrman/node_projects/react_projects/react-visjs-timeline/examples'
-let g:netrw_dirhist_6='/Users/brianmehrman/node_projects/react_projects/react-visjs-timeline'
-let g:netrw_dirhist_7='/Users/brianmehrman/ruby_projects/blog'
-let g:netrw_dirhist_8='/Users/brianmehrman/ruby_projects/react-redux-blog'
-let g:netrw_dirhist_9='/Users/brianmehrman/ruby_projects/gems/rails_probe'
+let g:netrw_dirhist_cnt =0
