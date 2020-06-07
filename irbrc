@@ -3,7 +3,6 @@
 begin
   require 'irb/completion'
   require 'rubygems'
-  require 'awesome_print'
 rescue Exception => e
   puts "#{e} \nOne of the gems did NOT load. Take a look at your ~/.irbrc file"
 end

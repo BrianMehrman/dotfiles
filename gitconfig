@@ -2,7 +2,7 @@
 	ui = auto
 [user]
 	name = brianmehrman
-	email = bcmehrman@gmail.com
+	email = brian.mehrman@centro.net
 [core]
 	excludesfile = /Users/Mehrman-MBP/.gitignore
 	editor = vim

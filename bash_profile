@@ -75,3 +75,5 @@ export GO_HOME=/usr/local/go/bin
 export PATH=$PATH:$GO_HOME
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+export PATH="$HOME/.cargo/bin:$PATH"

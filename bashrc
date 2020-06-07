@@ -95,6 +95,7 @@ HISTCONTROL=ignoreboth
 HISTFILESIZE=10000
 HISTSIZE=10000
 
+ssh-add
 
 # -------------------------------------------------------------------
 # MOTD
